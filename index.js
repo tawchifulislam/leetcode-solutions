@@ -159,3 +159,10 @@ var searchInsert = function (nums, target) {
   }
   return left;
 };
+
+// LeetCode 58. Length of Last Word
+var lengthOfLastWord = function (s) {
+  s = s.trim();
+  let words = s.split(' ');
+  return words[words.length - 1].length;
+};
