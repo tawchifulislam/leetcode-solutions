@@ -278,3 +278,9 @@ ArrayWrapper.prototype.valueOf = function () {
 ArrayWrapper.prototype.toString = function () {
   return `[${this.nums.join(',')}]`;
 };
+
+// LeetCode 2723. Add Two Promises
+var addTwoPromises = async function (promise1, promise2) {
+  const [val1, val2] = await Promise.all([promise1, promise2]);
+  return val1 + val2;
+};
