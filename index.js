@@ -239,3 +239,12 @@ var isPalindrome = function (x) {
 
   return true;
 };
+
+// LeetCode 2635. Apply Transform Over Each Element in Array
+var map = function (arr, fn) {
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(fn(arr[i], i));
+  }
+  return result;
+};
