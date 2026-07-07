@@ -3,14 +3,14 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
-    const map = new Map();
+function twoSum(nums, target) {
+    let visitedNumbers = {};
     for (let i = 0; i < nums.length; i++) {
-        const complement = target - nums[i];
-        if (map.has(complement)) {
-            return [map.get(complement), i];
+        let currentNumber = nums[i];
+        let needNumber = target - currentNumber;
+        if (needNumber in visitedNumbers) {
+            return [visitedNumbers[needNumber], i];
         }
-        map.set(nums[i], i);
+        visitedNumbers[currentNumber] = i;
     }
-    return [];
 };
