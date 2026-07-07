@@ -3,7 +3,7 @@
  * @param {number} target
  * @return {number[]}
  */
-function twoSum(nums, target) {
+var twoSum = function(nums, target) {
     let visitedNumbers = {};
     for (let i = 0; i < nums.length; i++) {
         let currentNumber = nums[i];
